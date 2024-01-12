@@ -1,5 +1,5 @@
 # bags-store
-- [Demo Project](https://maryamparvaz.github.io/X-O-game/)
+- [Demo Project](https://maryamparvaz.github.io/bags-store/index.html)
 
 - Developed by Maryam Parvaz 🙎
 
