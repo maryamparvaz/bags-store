@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body id="all">
+        <input type="text" name="" id="src" placeholder="src">
+        <input type="text" name="" id="name" placeholder="name">
+        <input type="text" name="" id="p1">
+        <input type="text" name="" id="p2">
+        <button>click</button>
+</body>
+<script>
+        let al = document.getElementById('al')
+        document.getElementsByTagName('button')[0].addEventListener('click' , () =>{
+                let srcc = document.getElementById('src').value
+                let namee = document.getElementById('name').value
+                let p1 = document.getElementById('p1').value
+                let p2 = document.getElementById('p2').value
+                // async function page1(){
+                //         let x = await fetch('https://65997639a20d3dc41cefc559.mockapi.io/page2')
+                //         let mydata = await x.json
+                        
+                // }
+                const newTask = {
+                        srcc :srcc ,
+                        name :namee ,
+                        price :p1,
+                        newprice :p2 
+                };
+                fetch('https://65997639a20d3dc41cefc559.mockapi.io/page2', {
+                        method: 'POST',
+                        headers: { 'content-type': 'application/json' },
+                        // Send your data in the request body as JSON
+                        body: JSON.stringify(newTask)
+                }).then(res => {
+                        if (res.ok) {
+                                return res.json();
+                        }
+                        // handle error
+                }).then(task => {
+                        alert('task recived')
+                        // do something with the new task
+                }).catch(error => {
+                        // handle error
+                        alert('no')
+                })
+        })
+</script>
+</html>

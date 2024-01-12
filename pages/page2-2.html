@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/page22.css">
+        <link rel="stylesheet" href="../font/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body class="flex justify-center" onclick="clos()">
+        <main class="w-full flex flex-wrap 2xl:container 2xl:justify-center ">
+                <header class="w-full flex justify-between bg-white z-50 p-3 fixed top-0 left-0 h-[70px]">
+                        <img id="logo1" onclick="closecart()" src="../img/Capture.PNG" alt=""
+                                class="w-[90px] h-[40px] cursor-pointer">
+                        <ul class="hidden w-[60%] lg:flex justify-evenly">
+                                <li
+                                        class="relative flex items-center after:absolute after:bottom-0 after:w-0 after:left-[50%] after:h-[1px] after:bg-black after:hover:w-full after:hover:left-0 after:transition-all after:duration-[.4s]">
+                                        <a href="">BEST SELLERS</a>
+                                </li>
+                                <li
+                                        class="relative flex items-center after:absolute after:bottom-0 after:w-0 after:left-[50%] after:h-[1px] after:bg-black after:hover:w-full after:hover:left-0 after:transition-all after:duration-[.4s]">
+                                        <a href="">SUITCASES</a>
+                                </li>
+                                <li
+                                        class="relative flex items-center after:absolute after:bottom-0 after:w-0 after:left-[50%] after:h-[1px] after:bg-black after:hover:w-full after:hover:left-0 after:transition-all after:duration-[.4s]">
+                                        <a href="">BAGS</a>
+                                </li>
+                                <li
+                                        class="relative flex items-center after:absolute after:bottom-0 after:w-0 after:left-[50%] after:h-[1px] after:bg-black after:hover:w-full after:hover:left-0 after:transition-all after:duration-[.4s]">
+                                        <a href="">ACCESSORIES</a>
+                                </li>
+                                <li
+                                        class="relative flex items-center after:absolute after:bottom-0 after:w-0 after:left-[50%] after:h-[1px] after:bg-black after:hover:w-full after:hover:left-0 after:transition-all after:duration-[.4s]">
+                                        <a href="">GUIDES & COLLECTIONS</a>
+                                </li>
+                                <li
+                                        class="relative flex items-center after:absolute after:bottom-0 after:w-0 after:left-[50%] after:h-[1px] after:bg-black after:hover:w-full after:hover:left-0 after:transition-all after:duration-[.4s]">
+                                        <a href="" class="text-red">SALE</a>
+                                </li>
+                        </ul>
+                        <ul class="flex w-[30%] lg:w-[15%] justify-evenly">
+                                <li class="flex items-center"><a href="">LOG IN</a></li>
+                                <li class="flex items-center text-[20px]"><i class="bi bi-search cursor-pointer"></i>
+                                </li>
+                                <li class="flex items-center relative"><i id="numm"
+                                                class="bi bi-bag cursor-pointer text-[20px]"></i></li>
+                        </ul>
+                </header>
+                <section class="w-full flex flex-wrap  mt-[70px] h-[100vh] ">
+                        <div class="relative w-full h-full md:w-[50%]">
+                                <div class="h-full flex flex-wrap absolute ">
+                                        <figure class="w-full ">
+                                                <img id="bag" class="w-full h-full object-cover" src="../img/60.jpg"
+                                                        alt="">
+                                        </figure>
+                                </div>
+                                <div id="mini" class="h-full absolute top-0 left-0 flex flex-wrap z-20  content-start">
+                                        <figure data-status="off" class="w-full ">
+                                                <img class="w-[100px] " src="../img/60.jpg" alt="">
+                                        </figure>
+                                        <figure data-status="off" class="w-full ">
+                                                <img class="w-[100px] " src="../img/61.jpg" alt="">
+                                        </figure>
+                                        <figure data-status="off" class="w-full">
+                                                <img class="w-[100px]" src="../img/62.jpg" alt="">
+                                        </figure>
+                                        <figure data-status="off" class="w-full">
+                                                <img class="w-[100px]" src="../img/63.jpg" alt="">
+                                        </figure>
+                                        <figure data-status="off" class="w-full">
+                                                <img class="w-[100px]" src="../img/64.jpg" alt="">
+                                        </figure>
+                                        <figure data-status="off" class="w-full">
+                                                <img class="w-[100px]" src="../img/65.jpg" alt="">
+                                        </figure>
+                                        <figure data-status="off" class="w-full">
+                                                <img class="w-[100px]" src="../img/66.jpg" alt="">
+                                        </figure>
+                                </div>
+                        </div>
+                        <div class="w-full md:w-[50%] p-7 md:overflow-y-scroll  *:my-6  md:h-[80%]">
+                                <div class="flex justify-between  text-[27px] lg:text-[35px] font-serif">
+                                        <h2>The Everywhere Zip Backpack</h2>
+                                        <span>£150</span>
+                                </div>
+                                <span class="font-medium">Final sale・Free shipping</span>
+                                <div class="font-medium text-[17px]">
+                                        <span>COLOR:</span>
+                                        <span id="c1"></span>
+                                </div>
+                                <div id="colors" class="flex">
+                                        <span data-num="1" data-status="off"
+                                                class="flex w-[25px] h-[25px] rounded-[50%] bg-white border-[.5px] border-gray-700  mr-3 cursor-pointer"></span>
+                                        <span data-num="2" data-status="off"
+                                                class="flex w-[25px] h-[25px] rounded-[50%] bg-pink1 border-[.5px] border-gray-700  cursor-pointer"></span>
+                                </div>
+                                <span id="cll" onclick="cart(event)"
+                                        class="flex cursor-pointer w-full bg-black border border-black justify-center items-center text-[18px] hover:bg-gray-500 text-white py-5">ADD
+                                        TO CART</span>
+                                <p>Crafted with water-resistant nylon, leather trim, and breathable mesh back panel for
+                                        extra comfort
+                                        Extended zipper clamshell opening to main compartment for easy access and
+                                        visibility
+                                        Interior organization system with zipper and slip pockets, water bottle pocket,
+                                        and detachable key clip keep your travel
+                                        essentials organized
+                                        Padded zip laptop compartment featuring an iPad slip pocket that fits up to 15"
+                                        laptop with magnetic locking zipper
+                                        External secure front zip pocket and hidden easy- access slip pocket
+                                        External back hidden zip pocket to store passport
+                                        Trolley sleeve secures to any Away suitcase for a smooth ride
+                                        Padded straps provide shoulder comfort
+                                        Top leather handle for easy carrying
+                                        Streamlined silhouette packs flat inside any suitcase</p>
+                                <div
+                                        class="w-full  flex *:md:mx-5 *:mx-1 *:md:text-[15px] border-b border-black pb-5 justify-between content-center">
+                                        <ul>
+                                                <li class=" flex items-center  w-full">
+                                                        <i class="bi bi-suitcase text-[26px]"></i>
+                                                        <span class="text-[13px] ml-1 ">Durable, lightweight
+                                                                shell</span>
+                                                </li>
+                                                <li class="mt-5 flex items-center  w-full">
+                                                        <i class="bi bi-suitcase-lg text-[22px]"></i>
+                                                        <span class="text-[13px] ml-1 ">Interior compression</span>
+                                                </li>
+                                        </ul>
+                                        <ul>
+                                                <li class=" flex items-center  w-full">
+                                                        <i class="bi bi-duffle text-[22px]"></i>
+                                                        <span class="text-[13px] ml-1 ">Laundry bag</span>
+                                                </li>
+                                                <li class="mt-5 flex items-center  w-full">
+                                                        <i class="bi bi-backpack text-[22px]"></i>
+                                                        <span class="text-[13px]">360° wheels</span>
+                                                </li>
+                                        </ul>
+                                        <ul>
+                                                <li class=" flex items-center  w-full">
+                                                        <i class="bi bi-handbag text-[22px]"></i>
+                                                        <span class="text-[13px] ml-1 ">TSA combination lock</span>
+                                                </li>
+                                                <li class="mt-5 flex items-center  w-full">
+                                                        <i class="bi bi-calendar4 text-[22px]"></i>
+                                                        <span class="text-[13px] ml-1 ">4-7 days</span>
+                                                </li>
+                                        </ul>
+                                </div>
+                                <ul id="ac">
+                                        <li data-status="off"
+                                                class=" overflow-hidden border-b border-black flex flex-wrap "
+                                                onclick="negative(event)">
+                                                <a class="cursor-pointer flex items-center"><span
+                                                                class="text-[32px] mr-2">+</span> SIZE & DETAILS</a>
+                                                <div id="ac1" class="w-full transition-all duration-[.7s] mt-6">
+                                                        <div
+                                                                class="w-full flex *:md:mx-5 *:mx-1 *:md:text-[15px]  pb-5 justify-between content-center mt-5">
+                                                                <ul>
+                                                                        <li class=" flex items-center  w-full">
+                                                                                <i
+                                                                                        class="bi bi-airplane text-[26px]"></i>
+                                                                                <span class="text-[13px] ml-1 ">Fits
+                                                                                        overhead on
+                                                                                        most major airlines</span>
+                                                                        </li>
+                                                                        <li class="mt-5 flex items-center  w-full">
+                                                                                <i
+                                                                                        class="bi bi-usb-symbol text-[22px]"></i>
+                                                                                <span class="text-[13px] ml-1 ">Ejectable
+                                                                                        USB
+                                                                                        charger</span>
+                                                                        </li>
+                                                                </ul>
+                                                                <ul>
+                                                                        <li class=" flex items-center  w-full">
+                                                                                <i
+                                                                                        class="bi bi-android text-[22px]"></i>
+                                                                                <span class="text-[13px] ml-1 ">6-9
+                                                                                        outfits</span>
+                                                                        </li>
+                                                                        <li class="mt-5 flex items-center  w-full">
+                                                                                <i
+                                                                                        class="bi bi-backpack text-[22px]"></i>
+                                                                                <span class="text-[13px]">360°
+                                                                                        wheels</span>
+                                                                        </li>
+                                                                </ul>
+                                                        </div>
+                                                        <ul class="w-full list-disc p-7 py-3">
+                                                                <li>Durable polycarbonate hard shell</li>
+                                                                <li>Leather details, including a black leather luggage
+                                                                        tag</li>
+                                                                <li>Ejectable USB charger that charges your phone and
+                                                                        other
+                                                                        portable devices, including a cable that
+                                                                        connects to any
+                                                                        wall
+                                                                        plug</li>
+                                                                <li>TSA-approved combination lock for extra safety</li>
+                                                                <li>360° spinner wheels that ensure a smooth ride</li>
+                                                                <li>Interior compression system to help pack more in
+                                                                </li>
+                                                        </ul>
+                                                        <p class="w-full"><strong>Exterior measurements</strong> 57.7 cm
+                                                                x 37.3
+                                                                cm x 24.3 cm</p>
+                                                        <p class="w-full"><strong>Interior measurements</strong> 53 cm x
+                                                                37 cm
+                                                        </p>
+                                                        <p class="w-full"><strong>Weight</strong> 3.8 kg</p>
+                                                        <p class="w-full"><strong>Capacity</strong> 47.9 L</p>
+                                                        <p class="w-full py-2">Using this Travel Sentry® lock allows
+                                                                your
+                                                                luggage to be opened, inspected, and relocked by
+                                                                security
+                                                                authorities without
+                                                                damage. For more information</p>
+                                                </div>
+                                        </li>
+                                        <li data-status="off"
+                                                class=" overflow-hidden border-b border-black w-full flex flex-wrap mt-5">
+                                                <div class="w-full flex items-center ">
+                                                        <span class="text-[32px] mr-2 h-full ">+</span>
+                                                        <a class="cursor-pointer flex">
+                                                                WARRANTY
+                                                                & RETURN POLICY</a>
+                                                </div>
+                                                <div id="ac2" class="w-full mt-6 transition-all duration-[.7s]">
+                                                        <p class="mb-2">This product is final sale and is not
+                                                                returnable, but is still
+                                                                protected by a limited warranty</p>
+                                                </div>
+                                        </li>
+                                </ul>
+                        </div>
+                        <div onclick="cart(event)" id="rit"
+                                class=" w-full md:w-[40%] bg-white fixed right-[-100%] h-[100vh] flex flex-wrap py-5 px-2 transition-all duration-[.8s]">
+                                <span onclick="clos(event)"
+                                        class="flex cursor-pointer w-full justify-end text-red-600 text-[22px]">close</span>
+                                <div class="w-full flex h-[50px] items-center">
+                                        <img class="flex h-[80px] rounded-[15px]" src="img/60.jpg" alt="">
+                                        <div class="flex w-full items-start text-[20px] md:text-[20px]">
+                                                <i class="bi bi-check"></i>
+                                                <p id="noad">The The Everywhere Zip Backpack added to cart</p>
+                                        </div>
+                                </div>
+                                <span onclick="op()" href=""
+                                        class="flex h-[60px] w-full bg-black  justify-center items-center text-[18px] hover:bg-gray-500 text-white py-5 cursor-pointer">VIEW
+                                        CART</span>
+                                <img src="../img/w.gif" alt="" class="h-[250px] w-full mb-3">
+                        </div>
+                </section>
+                <!-- cart page -->
+                <section id="page6"
+                        class="w-full fixed h-[100vh] overflow-y-scroll left-[100%] top-0 bg-gray-200  z-40 flex flex-wrap p-10 pt-[80px] justify-center transition-all duration-[.7s]">
+                <div class="w-full flex justify-end">
+                        <i onclick="cl6()" class="bi bi-x-octagon text-[30px] text-red-500 cursor-pointer"></i>
+                </div>
+                </section>
+        </main>
+</body>
+<script>
+        let colors = document.querySelectorAll('#colors>span')
+        let c1 = document.getElementById('c1')
+        let ac1 = document.getElementById('ac1')
+        let ac2 = document.getElementById('ac2')
+        let rit = document.getElementById('rit')
+        let bag = document.getElementById('bag')
+        let cll = document.getElementById('cll')
+        let numm = document.getElementById('numm')
+        let ac = document.querySelectorAll('#ac>li')
+        let mini = document.querySelectorAll('#mini>figure>img')
+        let logo1 = document.getElementById('logo1')
+        let page6 = document.getElementById('page6')
+        let noad = document.getElementById('noad')
+        let sale = 0
+        // for close page6
+                function cl6() {
+                        page6.style.left = '100%'
+                }
+        // for colors page 21
+        colors.forEach(element => {
+                element.addEventListener('click', () => {
+                        colors.forEach(val => {
+                                val.style.border = '.5px solid gray'
+                                element.setAttribute('data-status', 'off')
+
+                        });
+
+                        if ((element.getAttribute('data-status')) == 'off') {
+                                element.style.border = '2px solid black'
+                                element.setAttribute('data-status', 'on')
+                        } else {
+                                element.style.border = '0px'
+                                element.setAttribute('data-status', 'off')
+                        }
+                        if (element.getAttribute('data-num') == 1) {
+                                c1.innerHTML = 'white'
+                        } else {
+                                c1.innerHTML = 'pink'
+
+                        }
+                })
+        });
+        // for accordion page21
+        ac1.setAttribute('data-height', ac1.clientHeight)
+        ac2.setAttribute('data-height', ac2.clientHeight)
+        ac.forEach((val) => {
+                val.children[1].style.height = 0
+                val.addEventListener('click', () => {
+                        if (val.getAttribute('data-status') == 'off') {
+                                val.children[1].style.height = (val.children[1].getAttribute('data-height')) + 'px'
+                                val.children[0].children[0].innerHTML = '_'
+                                val.setAttribute('data-status', 'on')
+                        } else {
+                                val.setAttribute('data-status', 'off')
+                                val.children[1].style.height = 0
+                                val.children[0].children[0].innerHTML = '+'
+                        }
+                })
+        })
+        // cart page
+        let neww = []
+        let bagsall = []
+        let r = JSON.parse(localStorage.getItem('data'))
+        function cart(f) {
+                // f.target.parentElement.nextElementSibling.style.right = '0'
+                f.stopImmediatePropagation()
+                sale++
+                // numm.innerText = sale
+                const obj = { 'sale': sale }
+                neww.push(obj)
+                localStorage.setItem('data', JSON.stringify(neww))
+                // numm.innerText = sale;
+                // for adding to cart
+                let _div1 = document.createElement('div')
+                _div1.innerHTML = `
+                       <div id="choos" class="w-full flex justify-end">
+                               <i onclick="closeopt(this)" class=" bi bi-x text-red-500 text-[25px] cursor-pointer"></i>
+                       </div>
+                        <div class="w-full flex">
+                                        <figure class="w-[200px] mr-3">
+                                                <img src="../img/60.jpg" alt="" class="flex h-[200px] object-cover rounded-[10px]">
+                                        </figure>
+                                        <div
+                                                class="w-[80%] flex flex-wrap content-center my-2 *:lg:my-5 *:lg:text-[22px] *:text-[19px] ">
+                                                <div class="flex justify-evenly  ml-5 lg:ml-0">
+                                                        <h4>The Original Bigger Carry-On</h4>
+                                                </div>
+                                                <div class="w-full ml-5 lg:ml-0">
+                                                        <span>color</span>
+                                                        <span>pink</span>
+                                                </div>
+                                                <span class="w-full ml-5 lg:ml-0 text-red-600">140</span>
+                                        </div>
+                        </div>
+                `
+                _div1.classList.add('cartt')
+                page6.appendChild(_div1)
+                // dddddddddddddddddddddddddddddddddddddddddddddddddddd
+                // dddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+                // ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+                // ddddddddddddddddddddddddddddddddddddddddddddddddddddd
+                let buy = _div1.innerHTML
+                bagsall.push(buy)
+                const newTask = {
+                        buy: buy
+                };
+                fetch('https://65997639a20d3dc41cefc559.mockapi.io/cart', {
+                        method: 'POST',
+                        headers: { 'content-type': 'application/json' },
+                        // Send your data in the request body as JSON
+                        body: JSON.stringify(newTask)
+                }).then(res => {
+                        if (res.ok) {
+                                return res.json();
+                        }
+                        // handle error
+                }).then(task => {
+                        // do something with the new task
+                        f.target.parentElement.nextElementSibling.style.right = '0'
+                        
+                }).catch(error => {
+                        // handle error
+                        f.target.parentElement.nextElementSibling.style.right = '0'
+                        noad.innerHTML = 'DONT ADD PLEASE DO IT AGAIN'
+                })
+        }
+        // let z = 0
+        async function _refresh() {
+                let x = await fetch('https://65997639a20d3dc41cefc559.mockapi.io/cart')
+                let s = await x.json()
+                s.map((val) => {
+                        let div = document.createElement('div');
+                        idd = val.id
+                        div.innerHTML = `
+                        ${val.buy}
+                        `
+                        div.classList.add('cartt')
+                        page6.appendChild(div)
+                })
+        }
+        _refresh()
+        function clos(f) {
+                f.target.parentElement.style.right = '-100%'
+        }
+        window.addEventListener('click', () => {
+                rit.style.right = '-100%'
+
+        })
+        // for mini images
+        mini.forEach(element => {
+                element.addEventListener('click', () => {
+                        mini.forEach(val => {
+                                val.style.border = '0px'
+                                element.setAttribute('data-status', 'off')
+                        });
+                        if ((element.getAttribute('data-status')) == 'off') {
+                                element.style.border = '1px solid black'
+                                element.setAttribute('data-status', 'on')
+                        } else {
+                                element.style.border = '0px'
+                                element.setAttribute('data-status', 'off')
+                        }
+                        let p = element.getAttribute('src')
+                        bag.setAttribute('src', p)
+
+                })
+        });
+        // page cart
+        // numm.addEventListener('click', () => {
+
+        // })
+        // close select in cart
+        function closeopt(r) {
+                let choos = document.querySelectorAll('#choos>i')
+                choos.forEach((element, index) => {
+                        element.addEventListener(('click'), () => {
+                                fetch('https://65997639a20d3dc41cefc559.mockapi.io/cart/' + index, {
+                                        method: 'DELETE',
+
+                                }).then(res => {
+                                        if (res.ok) {
+                                                return res.json();
+                                        }
+                                        // handle error
+                                }).then(task => {
+                                        // Do something with deleted task
+                                }).catch(error => {
+                                        // handle error
+                                })
+                        })
+                });
+                r.parentElement.parentElement.remove();
+        }
+        // function closeopt2(i) {
+        //         console.log(i);
+        // }
+        // click logo
+        function closecart() {
+                window.location.href = '../index.html'
+        }
+        // finish page
+        numm.addEventListener('click', () => {
+                page6.style.left = '0'
+        })
+        // view cart
+        function op() {
+                page6.style.left = '0'
+        }
+</script>
+
+</html>
