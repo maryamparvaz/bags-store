@@ -1,5 +1,5 @@
 # bags-store
-- [Demo Project](https://maryamparvaz.github.io/bags-store/index.html)
+- [Demo Project](https://maryamparvaz.github.io/bags-store/)
 
 - Developed by Maryam Parvaz 🙎
 
