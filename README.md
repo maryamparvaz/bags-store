@@ -1,7 +1,7 @@
 # bags-store
 - [Demo Project](https://maryamparvaz.github.io/bags-store/)
 
-- Developed by Maryam Parvaz 🙎
+- Developed by Maryam Parvaz 🙎.
 
 - Created - 2023-10-13.
 
