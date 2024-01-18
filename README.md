@@ -5,7 +5,7 @@
 
 - Created - 2023-10-13.
 
-- Technologies Used - api,java script , Html , css , tailwind 😍.
+- Technologies Used - api,java script , Html , css , tailwind 😍..
 
 - Hooks Used : useState .
 
